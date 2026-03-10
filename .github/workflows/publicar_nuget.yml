@@ -48,6 +48,6 @@ jobs:
           find . -name "*.nupkg" | while read pkg; do
             dotnet nuget push "$pkg" \
               --api-key ${{ secrets.GITHUB_TOKEN }} \
-              --source "https://nuget.pkg.github.com/Drojascode/index.json" \
+              --source "https://nuget.pkg.github.com/JorgeMadri05/index.json" \
               --skip-duplicate
           done
