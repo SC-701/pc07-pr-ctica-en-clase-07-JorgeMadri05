@@ -24,11 +24,11 @@ jobs:
       - name: Registrar fuente GitHub Packages
         run: |
           dotnet nuget add source \
-            --username JorgeMadri05 \
+            --username  ${{ github.actor }} \
             --password ${{ secrets.GITHUB_TOKEN }} \
             --store-password-in-clear-text \
             --name "GitHub-SC701" \
-            "https://nuget.pkg.github.com/JorgeMadri05/index.json"
+            "https://nuget.pkg.github.com/SC-701/index.json"
 
       - name: Restaurar dependencias
         working-directory: Seguridad/Seguridad.MiddlewareAutorizacion
@@ -48,6 +48,6 @@ jobs:
           find . -name "*.nupkg" | while read pkg; do
             dotnet nuget push "$pkg" \
               --api-key ${{ secrets.GITHUB_TOKEN }} \
-              --source "https://nuget.pkg.github.com/JorgeMadri05/index.json" \
+              --source "https://nuget.pkg.github.com/SC-701/index.json" \
               --skip-duplicate
           done
