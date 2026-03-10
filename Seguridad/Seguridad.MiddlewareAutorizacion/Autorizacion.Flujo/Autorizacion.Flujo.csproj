@@ -10,7 +10,7 @@
 	<RepositoryUrl>https://github.com/SC701</RepositoryUrl>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
-
+ 
   <ItemGroup>
     <ProjectReference Include="..\Autorizacion.Abstracciones\Autorizacion.Abstracciones.csproj" />
   </ItemGroup>
