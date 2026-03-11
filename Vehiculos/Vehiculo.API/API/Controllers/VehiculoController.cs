@@ -47,7 +47,7 @@ namespace API.Controllers
             return NoContent();
         }
         [HttpGet]
-        [Authorize(Roles = "2")]
+        [Authorize(Roles = "1")]
         public async Task<IActionResult> Obtener()
         {
             var resultado = await _vehiculoFlujo.Obtener();
