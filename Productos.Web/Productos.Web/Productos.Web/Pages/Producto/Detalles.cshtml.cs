@@ -11,7 +11,7 @@ namespace Productos.Web.Pages.Producto
         private readonly IConfiguracion _configuracion;
 
         [BindProperty]
-        public ProductoResponse producto { get; set; } = default!;
+        public ProductoPrecioUSD producto { get; set; } = default!;
 
         public DetallesModel(IConfiguracion configuracion)
         {
@@ -29,7 +29,7 @@ namespace Productos.Web.Pages.Producto
             var opciones = new JsonSerializerOptions
             { PropertyNameCaseInsensitive = true };
 
-            producto = JsonSerializer.Deserialize<ProductoResponse>(resultado, opciones);
+            producto = JsonSerializer.Deserialize<ProductoPrecioUSD>(resultado, opciones);
         }
     }
 }

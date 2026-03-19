@@ -24,7 +24,11 @@
                     </div>
                     <div>
                         <b>@Html.DisplayNameFor(modelo => modelo.producto.Precio):</b>
-                        @Model.producto.Precio.ToString("C")
+                        @Model.producto.Precio
+                    </div>
+                    <div>
+                        <b>@Html.DisplayNameFor(modelo => modelo.producto.PrecioUSD):</b>
+                        @Model.producto.PrecioUSD
                     </div>
                     <div>
                         <b>@Html.DisplayNameFor(modelo => modelo.producto.Stock):</b>
